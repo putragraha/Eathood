@@ -21,8 +21,9 @@ class FoodDetailsActivity : AppCompatActivity() {
     }
 
     private fun initView(food : Food?) {
+        val descriptonText : String = food?.description + "\n\n\n" + "Source: id.wikipedia.org"
         iv_food_image.setImageBitmap(food?.picture)
-        tv_food_desc.text = food?.description
+        tv_food_desc.text = descriptonText
         supportActionBar?.title = food?.name
     }
 
