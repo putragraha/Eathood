@@ -2,7 +2,7 @@ package id.assist.eathood.food.view.activity
 
 import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
-import id.assist.eathood.food.base.BaseActivity
+import id.assist.eathood.base.BaseActivity
 import id.assist.eathood.food.model.Food
 import kotlinx.android.synthetic.main.activity_food_details.*
 

@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
-import id.assist.eathood.food.base.BaseActivity
+import id.assist.eathood.base.BaseActivity
 import id.assist.eathood.food.source.FoodMock
 import id.assist.eathood.food.view.adapter.FoodAdapter
 import kotlinx.android.synthetic.main.activity_food_list.*

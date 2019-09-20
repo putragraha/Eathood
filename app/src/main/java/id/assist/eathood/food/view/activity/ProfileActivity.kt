@@ -1,7 +1,7 @@
 package id.assist.eathood.food.view.activity
 
 import id.assist.eathood.R
-import id.assist.eathood.food.base.BaseActivity
+import id.assist.eathood.base.BaseActivity
 
 
 /**

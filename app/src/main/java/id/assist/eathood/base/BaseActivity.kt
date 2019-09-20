@@ -1,4 +1,4 @@
-package id.assist.eathood.food.base
+package id.assist.eathood.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
