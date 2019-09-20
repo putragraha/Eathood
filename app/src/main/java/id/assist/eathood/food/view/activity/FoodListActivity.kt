@@ -1,23 +1,27 @@
 package id.assist.eathood.food.view.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
+import id.assist.eathood.food.base.BaseActivity
 import id.assist.eathood.food.source.FoodMock
 import id.assist.eathood.food.view.adapter.FoodAdapter
 import kotlinx.android.synthetic.main.activity_food_list.*
 
-class FoodListActivity : AppCompatActivity() {
+class FoodListActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_food_list)
-        initView()
+    override fun getLayout(): Int = R.layout.activity_food_list
+
+    override fun initView() {
+        rv_food.layoutManager = LinearLayoutManager(this)
+        rv_food.adapter = FoodAdapter(FoodMock.data(this)) {
+            val intentDetails = Intent(this, FoodDetailsActivity::class.java)
+            intentDetails.putExtra(Variables.KEY_FOOD, it)
+            startActivity(intentDetails)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,14 +38,4 @@ class FoodListActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
-    private fun initView() {
-        rv_food.layoutManager = LinearLayoutManager(this)
-        rv_food.adapter = FoodAdapter(FoodMock.data(this)) {
-            val intentDetails = Intent(this, FoodDetailsActivity::class.java)
-            intentDetails.putExtra(Variables.KEY_FOOD, it)
-            startActivity(intentDetails)
-        }
-    }
-
 }
