@@ -41,7 +41,7 @@ class CornerLightActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_corner_light)
         initView()
-        initCornerLight()
+        initCornerLightObservers()
         initCheckboxListener()
         startChangeLightColor()
     }
@@ -72,7 +72,7 @@ class CornerLightActivity : AppCompatActivity() {
         )
     }
 
-    private fun initCornerLight() {
+    private fun initCornerLightObservers() {
         subject = CornerLightSubject()
         viewMap.forEach {(_, v) ->
                 observerMap[v] = CornerLightObserver(v)
