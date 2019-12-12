@@ -1,10 +1,12 @@
 package id.assist.eathood.cornerlight
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatCheckBox
 import id.assist.eathood.*
 import kotlinx.android.synthetic.main.activity_corner_light.*
 import kotlinx.coroutines.GlobalScope
@@ -19,13 +21,9 @@ class CornerLightActivity : AppCompatActivity() {
 
     private lateinit var subject: Subject
 
-    private lateinit var topLeftObserver: Observer
+    private val viewMap = mutableMapOf<AppCompatCheckBox, ImageView>()
 
-    private lateinit var topRightObserver: Observer
-
-    private lateinit var bottomLeftObserver: Observer
-
-    private lateinit var bottomRightObserver: Observer
+    private val observerMap = mutableMapOf<View, Observer>()
 
     private val colorList = listOf(
         android.R.color.holo_red_dark,
@@ -42,6 +40,7 @@ class CornerLightActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_corner_light)
+        initView()
         initCornerLight()
         initCheckboxListener()
         startChangeLightColor()
@@ -62,54 +61,34 @@ class CornerLightActivity : AppCompatActivity() {
         }
     }
 
+    private fun initView() {
+        viewMap.putAll(
+            mapOf(
+                cb_top_left to iv_light_top_left,
+                cb_top_right to iv_light_top_right,
+                cb_bottom_left to iv_light_bottom_left,
+                cb_bottom_right to iv_light_bottom_right
+            )
+        )
+    }
+
     private fun initCornerLight() {
         subject = CornerLightSubject()
-        topLeftObserver =
-            CornerLightObserver(iv_light_top_left)
-        topRightObserver =
-            CornerLightObserver(iv_light_top_right)
-        bottomLeftObserver =
-            CornerLightObserver(
-                iv_light_bottom_left
-            )
-        bottomRightObserver =
-            CornerLightObserver(
-                iv_light_bottom_right
-            )
-
-        subject.registerObserver(topLeftObserver)
-        subject.registerObserver(topRightObserver)
-        subject.registerObserver(bottomLeftObserver)
-        subject.registerObserver(bottomRightObserver)
+        viewMap.forEach {(_, v) ->
+                observerMap[v] = CornerLightObserver(v)
+                subject.registerObserver(observerMap[v]!!)
+        }
     }
 
     private fun initCheckboxListener() {
-        cb_top_left.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                subject.registerObserver(topLeftObserver)
-            } else {
-                subject.removeObserver(topLeftObserver)
-            }
-        }
-        cb_top_right.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                subject.registerObserver(topRightObserver)
-            } else {
-                subject.removeObserver(topRightObserver)
-            }
-        }
-        cb_bottom_left.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                subject.registerObserver(bottomLeftObserver)
-            } else {
-                subject.removeObserver(bottomLeftObserver)
-            }
-        }
-        cb_bottom_right.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                subject.registerObserver(bottomRightObserver)
-            } else {
-                subject.removeObserver(bottomRightObserver)
+        viewMap.forEach {(k, v) ->
+            k.setOnCheckedChangeListener{_, isChecked ->
+                val observer = observerMap[v]
+                if (isChecked) {
+                    subject.registerObserver(observer!!)
+                } else {
+                    subject.removeObserver(observer!!)
+                }
             }
         }
     }
@@ -118,7 +97,6 @@ class CornerLightActivity : AppCompatActivity() {
         GlobalScope.launch {
             colorList.forEach {
                 delay(1000)
-                Log.e("Color", it.toString())
                 if (subject is CornerLightSubject) {
                     val cornerLightSubject = subject as CornerLightSubject
                     cornerLightSubject.changeColor(it)
