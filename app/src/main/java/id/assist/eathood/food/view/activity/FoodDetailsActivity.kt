@@ -1,9 +1,14 @@
 package id.assist.eathood.food.view.activity
 
+import android.view.Menu
+import android.view.MenuItem
 import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
 import id.assist.eathood.food.model.Food
+import id.assist.eathood.food.textviewdecorator.BrightTextViewDecorator
+import id.assist.eathood.food.textviewdecorator.DarkTextViewDecorator
+import id.assist.eathood.food.textviewdecorator.ViewDecorator
 import kotlinx.android.synthetic.main.activity_food_details.*
 
 /**
@@ -13,6 +18,10 @@ import kotlinx.android.synthetic.main.activity_food_details.*
 
 class FoodDetailsActivity : BaseActivity() {
 
+    var isBright: Boolean = false
+
+    lateinit var viewDecorator: ViewDecorator
+
     override fun getLayout(): Int = R.layout.activity_food_details
 
     override fun initView() {
@@ -21,5 +30,32 @@ class FoodDetailsActivity : BaseActivity() {
         iv_food_image.setImageBitmap(food?.picture)
         tv_food_desc.text = descriptonText
         supportActionBar?.title = food?.name
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_food_details, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.menu_toggle_text_color -> {
+                decorateContentText()
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun decorateContentText() {
+        isBright = !isBright
+
+        if (isBright) {
+            viewDecorator = ViewDecorator(BrightTextViewDecorator(this))
+        } else {
+            viewDecorator = ViewDecorator(DarkTextViewDecorator(this))
+        }
+
+        viewDecorator.decorateTextView(tv_food_desc)
     }
 }

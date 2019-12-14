@@ -1,12 +1,11 @@
 package id.assist.eathood.food.view.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.assist.eathood.R
 import id.assist.eathood.food.model.Food
-import kotlinx.android.synthetic.main.view_food_item.view.*
+import id.assist.eathood.food.view.adapter.viewholder.FoodViewHolder
 
 
 /**
@@ -15,10 +14,10 @@ import kotlinx.android.synthetic.main.view_food_item.view.*
  */
 
 class FoodAdapter(private val foods: List<Food>, private val listener: (Food) -> Unit) :
-    RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
+    RecyclerView.Adapter<FoodViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        ViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder =
+        FoodViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.view_food_item,
                 parent,
@@ -28,20 +27,7 @@ class FoodAdapter(private val foods: List<Food>, private val listener: (Food) ->
 
     override fun getItemCount(): Int = foods.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         holder.bind(foods[position], listener)
-    }
-
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        fun bind(food: Food, listener: (Food) -> Unit) = with(itemView) {
-            iv_meal.setImageBitmap(food.picture)
-            tv_food_name.text = food.name
-            tv_description.text = food.description
-            setOnClickListener {
-                listener(food)
-            }
-        }
-
     }
 }
