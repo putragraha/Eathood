@@ -26,8 +26,7 @@ class CashierActivity: AppCompatActivity() {
             val amount = et_total_amount.text.toString()
 
             if (!TextUtils.isEmpty(amount)) {
-                currencyAmount = IndonesianCurrency()
-                currencyAmount?.amount = Integer.parseInt(amount)
+                currencyAmount = IndonesianCurrency(Integer.parseInt(amount))
 
                 if (cb_cashback_voucher.isChecked) {
                     currencyAmount = CashbackVoucher(currencyAmount!!)
@@ -47,7 +46,10 @@ class CashierActivity: AppCompatActivity() {
             return
         }
 
-        tv_total_amount.text = currencyAmount?.getAmountDescription()
+        val amount = currencyAmount?.getCurrency() + currencyAmount?.getTotalAmount()
+
+        tv_amount_description.text = currencyAmount?.getAmountDescription()
+        tv_total_amount.text = amount
         currencyAmount = null
     }
 }

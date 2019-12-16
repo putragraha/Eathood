@@ -8,6 +8,10 @@ package id.assist.eathood.cashier
 class CashbackVoucher(private var currencyAmount: CurrencyAmount) :
     VoucherDecorator(currencyAmount) {
 
+    override fun getTotalAmount(): Int = currencyAmount.getTotalAmount()
+
+    override fun getCurrency(): String = currencyAmount.getCurrency()
+
     override fun getAmountDescription(): String {
         return "Cashback 30%\n" + currencyAmount.getAmountDescription()
     }

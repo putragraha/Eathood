@@ -7,9 +7,9 @@ package id.assist.eathood.cashier
  */
 abstract class CurrencyAmount {
 
-    protected lateinit var currency: String
+    abstract fun getCurrency(): String
 
-    var amount: Int = 0
+    abstract fun getTotalAmount(): Int
 
     abstract fun getAmountDescription(): String
 }

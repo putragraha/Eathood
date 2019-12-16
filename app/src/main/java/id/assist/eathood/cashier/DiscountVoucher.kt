@@ -8,8 +8,13 @@ package id.assist.eathood.cashier
 class DiscountVoucher(private var currencyAmount: CurrencyAmount) :
     VoucherDecorator(currencyAmount) {
 
+    override fun getTotalAmount(): Int {
+        return currencyAmount.getTotalAmount() - (currencyAmount.getTotalAmount() * 30 / 100)
+    }
+
+    override fun getCurrency(): String = currencyAmount.getCurrency()
+
     override fun getAmountDescription(): String {
-        currencyAmount.amount = currencyAmount.amount - (currencyAmount.amount * 30 / 100)
         return "Discount 30%\n" + currencyAmount.getAmountDescription()
     }
 }
