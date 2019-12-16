@@ -48,7 +48,7 @@ class CashierActivity: AppCompatActivity() {
 
         val amount = currencyAmount?.getCurrency() + currencyAmount?.getTotalAmount()
 
-        tv_amount_description.text = currencyAmount?.getAmountDescription()
+        tv_amount_description.text = currencyAmount?.getDescription()
         tv_total_amount.text = amount
         currencyAmount = null
     }

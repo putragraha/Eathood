@@ -12,7 +12,7 @@ class CashbackVoucher(private var currencyAmount: CurrencyAmount) :
 
     override fun getCurrency(): String = currencyAmount.getCurrency()
 
-    override fun getAmountDescription(): String {
-        return "Cashback 30%\n" + currencyAmount.getAmountDescription()
+    override fun getDescription(): String {
+        return "Cashback 30%\n" + currencyAmount.getDescription()
     }
 }

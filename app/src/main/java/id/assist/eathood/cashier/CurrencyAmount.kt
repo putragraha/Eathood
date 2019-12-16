@@ -11,5 +11,5 @@ abstract class CurrencyAmount {
 
     abstract fun getTotalAmount(): Int
 
-    abstract fun getAmountDescription(): String
+    abstract fun getDescription(): String
 }

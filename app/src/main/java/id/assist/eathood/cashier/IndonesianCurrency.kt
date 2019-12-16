@@ -11,5 +11,5 @@ class IndonesianCurrency(var amount: Int) : CurrencyAmount() {
 
     override fun getTotalAmount(): Int = amount
 
-    override fun getAmountDescription(): String = ""
+    override fun getDescription(): String = ""
 }
