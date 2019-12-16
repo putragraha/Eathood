@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+            android:id="@+id/et_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_total_amount"
+            tools:ignore="Autofill,TextFields" />
+
+    <CheckBox
+            android:id="@+id/cb_discount_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_discount"/>
+
+    <CheckBox
+            android:id="@+id/cb_cashback_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_cashback_voucher"/>
+
+    <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_calculate"
+            android:layout_gravity="end"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    <TextView
+            android:id="@+id/tv_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:gravity="end"/>
+
+</LinearLayout>

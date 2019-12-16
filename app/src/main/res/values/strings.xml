@@ -5,6 +5,10 @@
     <string name="profile_name">Putra Nugraha</string>
     <string name="profile_email">putra.graha.7@gmail.com</string>
     <string name="change_content_color">Change content color</string>
+    <string name="label_total_amount">Total amount</string>
+    <string name="label_discount">Use 30% Discount Voucher</string>
+    <string name="label_cashback_voucher">Use 30% Cashback Voucher</string>
+    <string name="label_calculate">Calculate</string>
 
     <string-array name="food_array">
         <item>Bakso</item>
