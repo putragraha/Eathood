@@ -9,9 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatCheckBox
 import id.assist.eathood.*
 import kotlinx.android.synthetic.main.activity_corner_light.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers.Main
 
 /**
  * @author Putra Nugraha (putra.nugraha@dana.id)
@@ -100,7 +99,9 @@ class CornerLightActivity : AppCompatActivity() {
                 if (subject is CornerLightSubject) {
                     val cornerLightSubject = subject as CornerLightSubject
                     cornerLightSubject.changeColor(it)
-                    cornerLightSubject.notifyObservers()
+                    withContext(Main) {
+                        cornerLightSubject.notifyObservers()
+                    }
                 }
             }
         }
