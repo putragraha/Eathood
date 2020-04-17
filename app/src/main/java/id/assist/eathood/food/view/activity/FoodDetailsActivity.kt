@@ -6,9 +6,8 @@ import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
 import id.assist.eathood.food.model.Food
-import id.assist.eathood.food.textviewdecorator.BrightTextViewDecorator
-import id.assist.eathood.food.textviewdecorator.DarkTextViewDecorator
-import id.assist.eathood.food.textviewdecorator.ViewDecorator
+import id.assist.eathood.food.textviewdecorator.TextViewPainterFactory
+import id.assist.eathood.food.textviewdecorator.ViewPainter
 import kotlinx.android.synthetic.main.activity_food_details.*
 
 /**
@@ -18,9 +17,7 @@ import kotlinx.android.synthetic.main.activity_food_details.*
 
 class FoodDetailsActivity : BaseActivity() {
 
-    var isBright: Boolean = false
-
-    lateinit var viewDecorator: ViewDecorator
+    var light: Boolean = false
 
     override fun getLayout(): Int = R.layout.activity_food_details
 
@@ -48,14 +45,12 @@ class FoodDetailsActivity : BaseActivity() {
     }
 
     private fun decorateContentText() {
-        isBright = !isBright
+        light = !light
 
-        if (isBright) {
-            viewDecorator = ViewDecorator(BrightTextViewDecorator(this))
-        } else {
-            viewDecorator = ViewDecorator(DarkTextViewDecorator(this))
-        }
+        val viewPainter = ViewPainter(
+            TextViewPainterFactory.createInstance(this, light)
+        )
 
-        viewDecorator.decorateTextView(tv_food_desc)
+        viewPainter.decorateTextView(tv_food_desc)
     }
 }
