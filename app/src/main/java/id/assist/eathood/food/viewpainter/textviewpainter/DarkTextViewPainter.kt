@@ -1,4 +1,4 @@
-package id.assist.eathood.food.textviewdecorator
+package id.assist.eathood.food.viewpainter.textviewpainter
 
 import android.content.Context
 import android.view.View
@@ -18,7 +18,7 @@ class DarkTextViewPainter(private val context: Context) : TextViewPainter, View.
     }
 
     override fun doMagic(textView: TextView) {
-        textView.setTextColor(context.resources.getColor(android.R.color.black))
+        textView.setTextColor(context.resources.getColor(android.R.color.white))
         onClick(textView)
     }
 }

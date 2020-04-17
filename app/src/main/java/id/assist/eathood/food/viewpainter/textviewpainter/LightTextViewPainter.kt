@@ -1,4 +1,4 @@
-package id.assist.eathood.food.textviewdecorator
+package id.assist.eathood.food.viewpainter.textviewpainter
 
 import android.content.Context
 import android.view.View
@@ -14,11 +14,11 @@ import id.assist.eathood.contract.TextViewPainter
 class LightTextViewPainter(private val context: Context) : TextViewPainter, View.OnClickListener {
 
     override fun onClick(view: View?) {
-        Toast.makeText(context, "I am Red", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "I am Light", Toast.LENGTH_SHORT).show()
     }
 
     override fun doMagic(textView: TextView) {
-        textView.setTextColor(context.resources.getColor(android.R.color.holo_red_light))
+        textView.setTextColor(context.resources.getColor(android.R.color.black))
         onClick(textView)
     }
 }
