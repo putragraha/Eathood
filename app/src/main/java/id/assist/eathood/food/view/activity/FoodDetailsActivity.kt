@@ -6,8 +6,7 @@ import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
 import id.assist.eathood.food.model.Food
-import id.assist.eathood.food.textviewdecorator.TextViewPainterFactory
-import id.assist.eathood.food.textviewdecorator.ViewPainter
+import id.assist.eathood.food.viewpainter.ViewPainterFactory
 import kotlinx.android.synthetic.main.activity_food_details.*
 
 /**
@@ -24,8 +23,8 @@ class FoodDetailsActivity : BaseActivity() {
     override fun initView() {
         val food : Food? = intent.extras?.getParcelable(Variables.KEY_FOOD)
         val descriptonText : String = food?.description + "\n\n\n" + "Source: id.wikipedia.org"
-        iv_food_image.setImageBitmap(food?.picture)
-        tv_food_desc.text = descriptonText
+        ivFoodImage.setImageBitmap(food?.picture)
+        tvFoodDesc.text = descriptonText
         supportActionBar?.title = food?.name
     }
 
@@ -47,10 +46,11 @@ class FoodDetailsActivity : BaseActivity() {
     private fun decorateContentText() {
         light = !light
 
-        val viewPainter = ViewPainter(
-            TextViewPainterFactory.createInstance(this, light)
-        )
+        val viewPainter = ViewPainterFactory.createInstance(this, light)
+        val textViewPainter = viewPainter.createTextViewPainter()
+        val layoutPainter = viewPainter.createLayoutPainter()
 
-        viewPainter.decorateTextView(tv_food_desc)
+        textViewPainter.doMagic(tvFoodDesc)
+        layoutPainter.doMagic(svFoodDetails)
     }
 }
