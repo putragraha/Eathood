@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_food_details.*
 
 class FoodDetailsActivity : BaseActivity() {
 
-    var light: Boolean = false
+    var light: Boolean = true
 
     override fun getLayout(): Int = R.layout.activity_food_details
 
