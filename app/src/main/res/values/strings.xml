@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">Eathood</string>
+    <string name="app_name">Temporary Todo List</string>
     <string name="food_list_title">Daftar Makanan</string>
+    <string name="todo_list_title">Todo</string>
     <string name="menu_profile">Profile</string>
     <string name="profile_name">Putra Nugraha</string>
     <string name="profile_email">putra.graha.7@gmail.com</string>
+    <string name="label_remove">Remove</string>
+    <string name="label_todo_hint_title">What do you want todo?</string>
+    <string name="label_todo_hint_description">Describe it more</string>
+    <string name="label_add_todo">Add Todo</string>
 
     <string-array name="food_array">
         <item>Bakso</item>
