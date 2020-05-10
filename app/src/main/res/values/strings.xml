@@ -4,6 +4,11 @@
     <string name="menu_profile">Profile</string>
     <string name="profile_name">Putra Nugraha</string>
     <string name="profile_email">putra.graha.7@gmail.com</string>
+    <string name="label_spell_a_cast">Spell a Cast</string>
+    <string name="label_firaga">Firaga</string>
+    <string name="label_blizzaga">Blizzaga</string>
+    <string name="label_thundaga">Thundaga</string>
+    <string name="label_undo">Undo last spell cast</string>
 
     <string-array name="food_array">
         <item>Bakso</item>
