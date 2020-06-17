@@ -1,8 +1,6 @@
 package id.assist.eathood.food.model
 
 import android.graphics.Bitmap
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
 
 
 /**
@@ -10,9 +8,8 @@ import kotlinx.android.parcel.Parcelize
  * @version Food, v 1.1.0 2019-08-27 23:37 by Putra Nugraha
  */
 
-@Parcelize
 data class Food(
-    val name: String,
+    var name: String,
     val picture: Bitmap,
     val description: String
-) : Parcelable
+)

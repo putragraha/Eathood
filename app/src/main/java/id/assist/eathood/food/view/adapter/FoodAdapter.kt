@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.assist.eathood.R
-import id.assist.eathood.food.model.Food
+import id.assist.eathood.food.adapter.BeverageAdapter
 import kotlinx.android.synthetic.main.view_food_item.view.*
 
 
@@ -14,8 +14,9 @@ import kotlinx.android.synthetic.main.view_food_item.view.*
  * @version FoodAdapter, v 1.1.0 2019-08-27 23:15 by Putra Nugraha
  */
 
-class FoodAdapter(private val foods: List<Food>, private val listener: (Food) -> Unit) :
-    RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
+class FoodAdapter(
+    private val beverages: List<BeverageAdapter>
+) : RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
@@ -26,21 +27,18 @@ class FoodAdapter(private val foods: List<Food>, private val listener: (Food) ->
             )
         )
 
-    override fun getItemCount(): Int = foods.size
+    override fun getItemCount(): Int = beverages.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(foods[position], listener)
+        holder.bind(beverages[position])
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(food: Food, listener: (Food) -> Unit) = with(itemView) {
-            iv_meal.setImageBitmap(food.picture)
-            tv_food_name.text = food.name
-            tv_description.text = food.description
-            setOnClickListener {
-                listener(food)
-            }
+        fun bind(beverageAdapter: BeverageAdapter) = with(itemView) {
+            iv_meal.setImageBitmap(beverageAdapter.food.picture)
+            tv_food_name.text = beverageAdapter.name
+            tv_description.text = beverageAdapter.food.description
         }
 
     }

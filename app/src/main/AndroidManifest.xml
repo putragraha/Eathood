@@ -13,7 +13,7 @@
             tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
         <activity android:name=".food.view.activity.FoodListActivity"
-                android:screenOrientation="portrait">
+                android:screenOrientation="unspecified">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -21,12 +21,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".food.view.activity.FoodDetailsActivity"
-                android:screenOrientation="portrait"
-                android:parentActivityName=".food.view.activity.FoodListActivity"/>
-
         <activity android:name=".food.view.activity.ProfileActivity"
-                android:screenOrientation="portrait"
+                android:screenOrientation="unspecified"
                 android:parentActivityName=".food.view.activity.FoodListActivity"/>
 
     </application>

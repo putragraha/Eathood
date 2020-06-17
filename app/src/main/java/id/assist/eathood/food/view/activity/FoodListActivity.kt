@@ -5,8 +5,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.assist.eathood.R
-import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
+import id.assist.eathood.food.mapper.toBeverages
 import id.assist.eathood.food.source.FoodMock
 import id.assist.eathood.food.view.adapter.FoodAdapter
 import kotlinx.android.synthetic.main.activity_food_list.*
@@ -17,11 +17,7 @@ class FoodListActivity : BaseActivity() {
 
     override fun initView() {
         rv_food.layoutManager = LinearLayoutManager(this)
-        rv_food.adapter = FoodAdapter(FoodMock.data(this)) {
-            val intentDetails = Intent(this, FoodDetailsActivity::class.java)
-            intentDetails.putExtra(Variables.KEY_FOOD, it)
-            startActivity(intentDetails)
-        }
+        rv_food.adapter = FoodAdapter(FoodMock.data(this).toBeverages())
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
