@@ -12,7 +12,7 @@
             android:theme="@style/AppTheme"
             tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <activity android:name=".food.view.activity.FoodListActivity"
+        <activity android:name=".strategy.view.activity.FoodListActivity"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,13 +21,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".food.view.activity.FoodDetailsActivity"
+        <activity android:name=".strategy.view.activity.FoodDetailsActivity"
                 android:screenOrientation="portrait"
-                android:parentActivityName=".food.view.activity.FoodListActivity"/>
+                android:parentActivityName=".strategy.view.activity.FoodListActivity"/>
 
-        <activity android:name=".food.view.activity.ProfileActivity"
+        <activity android:name=".strategy.view.activity.ProfileActivity"
                 android:screenOrientation="portrait"
-                android:parentActivityName=".food.view.activity.FoodListActivity"/>
+                android:parentActivityName=".strategy.view.activity.FoodListActivity"/>
 
     </application>
 

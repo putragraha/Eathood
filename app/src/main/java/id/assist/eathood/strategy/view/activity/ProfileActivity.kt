@@ -1,4 +1,4 @@
-package id.assist.eathood.food.view.activity
+package id.assist.eathood.strategy.view.activity
 
 import id.assist.eathood.R
 import id.assist.eathood.base.BaseActivity

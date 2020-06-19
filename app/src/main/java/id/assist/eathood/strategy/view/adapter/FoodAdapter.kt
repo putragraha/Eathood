@@ -1,11 +1,11 @@
-package id.assist.eathood.food.view.adapter
+package id.assist.eathood.strategy.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.assist.eathood.R
-import id.assist.eathood.food.model.Food
-import id.assist.eathood.food.view.adapter.viewholder.FoodViewHolder
+import id.assist.eathood.strategy.model.Food
+import id.assist.eathood.strategy.view.adapter.viewholder.FoodViewHolder
 
 
 /**

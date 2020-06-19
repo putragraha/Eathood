@@ -1,4 +1,4 @@
-package id.assist.eathood.food.view.activity
+package id.assist.eathood.strategy.view.activity
 
 import android.content.Intent
 import android.view.Menu
@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
-import id.assist.eathood.food.source.FoodMock
-import id.assist.eathood.food.view.adapter.FoodAdapter
+import id.assist.eathood.strategy.source.FoodMock
+import id.assist.eathood.strategy.view.adapter.FoodAdapter
 import kotlinx.android.synthetic.main.activity_food_list.*
 
 class FoodListActivity : BaseActivity() {

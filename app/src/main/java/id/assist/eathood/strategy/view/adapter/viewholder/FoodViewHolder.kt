@@ -1,8 +1,8 @@
-package id.assist.eathood.food.view.adapter.viewholder
+package id.assist.eathood.strategy.view.adapter.viewholder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import id.assist.eathood.food.model.Food
+import id.assist.eathood.strategy.model.Food
 import kotlinx.android.synthetic.main.view_food_item.view.*
 
 

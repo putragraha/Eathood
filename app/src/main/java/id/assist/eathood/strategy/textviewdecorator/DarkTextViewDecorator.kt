@@ -1,4 +1,4 @@
-package id.assist.eathood.food.textviewdecorator
+package id.assist.eathood.strategy.textviewdecorator
 
 import android.content.Context
 import android.view.View

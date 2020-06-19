@@ -10,7 +10,7 @@
         android:paddingLeft="16dp"
         android:paddingEnd="16dp"
         android:paddingRight="16dp"
-        tools:context=".food.view.activity.FoodListActivity">
+        tools:context=".strategy.view.activity.FoodListActivity">
 
     <TextView
             android:id="@+id/tv_food_list_title"

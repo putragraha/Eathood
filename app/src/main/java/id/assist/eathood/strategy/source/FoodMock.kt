@@ -1,7 +1,7 @@
-package id.assist.eathood.food.source
+package id.assist.eathood.strategy.source
 
 import android.content.Context
-import id.assist.eathood.food.model.Food
+import id.assist.eathood.strategy.model.Food
 import id.assist.eathood.util.FoodBuilder
 
 

@@ -1,14 +1,14 @@
-package id.assist.eathood.food.view.activity
+package id.assist.eathood.strategy.view.activity
 
 import android.view.Menu
 import android.view.MenuItem
 import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
-import id.assist.eathood.food.model.Food
-import id.assist.eathood.food.textviewdecorator.BrightTextViewDecorator
-import id.assist.eathood.food.textviewdecorator.DarkTextViewDecorator
-import id.assist.eathood.food.textviewdecorator.ViewDecorator
+import id.assist.eathood.strategy.model.Food
+import id.assist.eathood.strategy.textviewdecorator.BrightTextViewDecorator
+import id.assist.eathood.strategy.textviewdecorator.DarkTextViewDecorator
+import id.assist.eathood.strategy.textviewdecorator.ViewDecorator
 import kotlinx.android.synthetic.main.activity_food_details.*
 
 /**

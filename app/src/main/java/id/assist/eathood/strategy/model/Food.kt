@@ -1,4 +1,4 @@
-package id.assist.eathood.food.model
+package id.assist.eathood.strategy.model
 
 import android.graphics.Bitmap
 import android.os.Parcelable

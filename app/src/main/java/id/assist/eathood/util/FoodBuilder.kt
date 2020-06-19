@@ -1,7 +1,7 @@
 package id.assist.eathood.util
 
 import android.content.Context
-import id.assist.eathood.food.model.Food
+import id.assist.eathood.strategy.model.Food
 
 
 /**
