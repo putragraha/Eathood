@@ -1,4 +1,4 @@
-package id.assist.eathood.todolist.model
+package id.assist.eathood.singleton.model
 
 
 /**

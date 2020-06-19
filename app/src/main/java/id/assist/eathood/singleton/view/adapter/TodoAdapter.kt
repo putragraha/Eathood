@@ -1,11 +1,11 @@
-package id.assist.eathood.todolist.view.adapter
+package id.assist.eathood.singleton.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import id.assist.eathood.R
-import id.assist.eathood.todolist.model.Todo
+import id.assist.eathood.singleton.model.Todo
 import kotlinx.android.synthetic.main.view_todo_item.view.*
 
 

@@ -1,6 +1,6 @@
-package id.assist.eathood.todolist.repository
+package id.assist.eathood.singleton.repository
 
-import id.assist.eathood.todolist.model.Todo
+import id.assist.eathood.singleton.model.Todo
 
 
 /**

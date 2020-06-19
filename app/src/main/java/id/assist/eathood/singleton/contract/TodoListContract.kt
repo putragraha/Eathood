@@ -1,6 +1,6 @@
-package id.assist.eathood.todolist.contract
+package id.assist.eathood.singleton.contract
 
-import id.assist.eathood.todolist.model.Todo
+import id.assist.eathood.singleton.model.Todo
 
 
 /**

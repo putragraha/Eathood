@@ -23,7 +23,7 @@
                 android:screenOrientation="portrait"
                 android:parentActivityName=".food.view.activity.FoodListActivity"/>
 
-        <activity android:name=".todolist.view.activity.TodoListActivity"
+        <activity android:name=".singleton.view.activity.TodoListActivity"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".todolist.view.activity.TodoFormActivity"
+        <activity android:name=".singleton.view.activity.TodoFormActivity"
                 android:screenOrientation="portrait"/>
 
     </application>

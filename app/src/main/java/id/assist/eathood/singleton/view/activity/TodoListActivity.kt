@@ -1,14 +1,14 @@
-package id.assist.eathood.todolist.view.activity
+package id.assist.eathood.singleton.view.activity
 
 import android.app.Activity
 import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.assist.eathood.R
 import id.assist.eathood.base.BaseActivity
-import id.assist.eathood.todolist.contract.TodoListContract
-import id.assist.eathood.todolist.model.Todo
-import id.assist.eathood.todolist.presenter.TodoListPresenter
-import id.assist.eathood.todolist.view.adapter.TodoAdapter
+import id.assist.eathood.singleton.contract.TodoListContract
+import id.assist.eathood.singleton.model.Todo
+import id.assist.eathood.singleton.presenter.TodoListPresenter
+import id.assist.eathood.singleton.view.adapter.TodoAdapter
 import kotlinx.android.synthetic.main.activity_todo_list.*
 
 

@@ -1,8 +1,8 @@
-package id.assist.eathood.todolist.presenter
+package id.assist.eathood.singleton.presenter
 
-import id.assist.eathood.todolist.contract.TodoListContract
-import id.assist.eathood.todolist.model.Todo
-import id.assist.eathood.todolist.repository.TodoListRepository
+import id.assist.eathood.singleton.contract.TodoListContract
+import id.assist.eathood.singleton.model.Todo
+import id.assist.eathood.singleton.repository.TodoListRepository
 
 
 /**
