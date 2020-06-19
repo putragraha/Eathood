@@ -1,4 +1,4 @@
-package id.assist.eathood.cashier
+package id.assist.eathood.decorator
 
 import android.os.Bundle
 import android.text.TextUtils
