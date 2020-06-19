@@ -1,4 +1,4 @@
-package id.assist.eathood.cornerlight
+package id.assist.eathood.observer
 
 import android.os.Bundle
 import android.view.Menu

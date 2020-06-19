@@ -1,6 +1,4 @@
-package id.assist.eathood.cornerlight
-
-import id.assist.eathood.cornerlight.Observer
+package id.assist.eathood.observer
 
 
 /**
