@@ -6,7 +6,7 @@ import id.assist.eathood.R
 import id.assist.eathood.constant.Variables
 import id.assist.eathood.base.BaseActivity
 import id.assist.eathood.food.model.Food
-import id.assist.eathood.food.viewpainter.ViewPainterFactory
+import id.assist.eathood.food.abstractfactory.ViewPainterFactory
 import kotlinx.android.synthetic.main.activity_food_details.*
 
 /**

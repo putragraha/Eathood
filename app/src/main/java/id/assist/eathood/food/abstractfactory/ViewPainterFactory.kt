@@ -1,4 +1,4 @@
-package id.assist.eathood.food.viewpainter
+package id.assist.eathood.food.abstractfactory
 
 import android.content.Context
 import id.assist.eathood.contract.ViewPainter

@@ -1,11 +1,11 @@
-package id.assist.eathood.food.viewpainter
+package id.assist.eathood.food.abstractfactory
 
 import android.content.Context
 import id.assist.eathood.contract.LayoutPainter
 import id.assist.eathood.contract.TextViewPainter
 import id.assist.eathood.contract.ViewPainter
-import id.assist.eathood.food.viewpainter.layoutpainter.LightLayoutPainter
-import id.assist.eathood.food.viewpainter.textviewpainter.LightTextViewPainter
+import id.assist.eathood.food.abstractfactory.layoutpainter.LightLayoutPainter
+import id.assist.eathood.food.abstractfactory.textviewpainter.LightTextViewPainter
 
 
 /**
