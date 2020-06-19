@@ -1,6 +1,6 @@
-package id.assist.eathood.spellcaster.invoker
+package id.assist.eathood.command.invoker
 
-import id.assist.eathood.spellcaster.command.Command
+import id.assist.eathood.command.command.Command
 
 
 /**

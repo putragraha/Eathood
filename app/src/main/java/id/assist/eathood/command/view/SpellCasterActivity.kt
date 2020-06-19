@@ -1,13 +1,13 @@
-package id.assist.eathood.spellcaster.view
+package id.assist.eathood.command.view
 
 import id.assist.eathood.R
 import id.assist.eathood.base.BaseActivity
-import id.assist.eathood.spellcaster.command.BlizzagaCommand
-import id.assist.eathood.spellcaster.command.Command
-import id.assist.eathood.spellcaster.command.FiragaCommand
-import id.assist.eathood.spellcaster.command.ThundagaCommand
-import id.assist.eathood.spellcaster.invoker.Bracelet
-import id.assist.eathood.spellcaster.invoker.UltimateBracelet
+import id.assist.eathood.command.command.BlizzagaCommand
+import id.assist.eathood.command.command.Command
+import id.assist.eathood.command.command.FiragaCommand
+import id.assist.eathood.command.command.ThundagaCommand
+import id.assist.eathood.command.invoker.Bracelet
+import id.assist.eathood.command.invoker.UltimateBracelet
 import kotlinx.android.synthetic.main.activity_spell_caster.*
 
 

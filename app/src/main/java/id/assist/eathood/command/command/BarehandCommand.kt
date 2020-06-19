@@ -1,4 +1,4 @@
-package id.assist.eathood.spellcaster.command
+package id.assist.eathood.command.command
 
 import android.annotation.SuppressLint
 import android.widget.TextView

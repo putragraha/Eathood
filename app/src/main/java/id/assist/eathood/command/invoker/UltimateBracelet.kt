@@ -1,8 +1,8 @@
-package id.assist.eathood.spellcaster.invoker
+package id.assist.eathood.command.invoker
 
 import android.widget.TextView
-import id.assist.eathood.spellcaster.command.BarehandCommand
-import id.assist.eathood.spellcaster.command.Command
+import id.assist.eathood.command.command.BarehandCommand
+import id.assist.eathood.command.command.Command
 
 
 /**

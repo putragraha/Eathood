@@ -23,7 +23,7 @@
                 android:screenOrientation="portrait"
                 android:parentActivityName=".food.view.activity.FoodListActivity"/>
 
-        <activity android:name=".spellcaster.view.SpellCasterActivity"
+        <activity android:name=".command.view.SpellCasterActivity"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
