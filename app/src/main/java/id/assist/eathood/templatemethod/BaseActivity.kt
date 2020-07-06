@@ -1,4 +1,4 @@
-package id.assist.eathood.base
+package id.assist.eathood.templatemethod
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
