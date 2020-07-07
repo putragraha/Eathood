@@ -1,4 +1,4 @@
-package id.assist.eathood.food.mapper
+package id.assist.eathood.food.iterator
 
 import id.assist.eathood.food.adapter.BeverageAdapter
 import id.assist.eathood.food.model.Food
